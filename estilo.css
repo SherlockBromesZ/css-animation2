@@ -1,0 +1,111 @@
+.conteudo{
+    background-color: antiquewhite;
+    border: 2px dashed rgb(143, 143, 180);
+}
+
+h1{
+    margin-left: 10px;
+}
+.peca{
+    background-color: aliceblue;
+    border: 2px dashed rgb(199, 199, 233);
+    display: inline-block;
+    padding: 15px 100px;
+    margin: 5px;
+    border-radius: 25px;
+}
+
+.transformx{
+    transform: translateX(100px);
+    border-left: 2px dashed red;
+    transition: 1s;
+}
+
+.transformy{
+    transform: translateY(20px);
+    border-top: 2px dashed red;
+    transition: 1s;
+}
+
+.rotatex{
+    transform: rotateX(60deg);
+    transition: 1s;
+}
+
+.rotatey{
+    transform: rotateY(60deg);
+    transition: 1s;
+}
+.rotatez{
+    transform: rotateZ(-60deg);
+    transition: 1s;
+}
+.linha_horizontal{
+    position: absolute;
+    left: -25px;
+    top: 40px;
+    background-color: rgb(51, 51, 51);
+    height: 2px;
+    width: 300px;
+}
+.linha_vertical{
+    position: absolute;
+    left: 125px;
+    top: -25px;
+    background-color: rgb(51, 51, 51);
+    height: 130px;
+    width: 2px;
+}
+.linha_diagonal{
+    top: 50%;
+    right: 50%;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 60px;
+    background-color: rgb(51, 51, 51);
+}
+
+.mario:hover{
+    animation: drive-and-rotate 3s linear infinite;
+    animation-fill-mode: both;
+}
+
+.peca.transformx:hover{
+    transform: translateX(-2px);
+    border-left: 2px dashed rgb(199, 199, 233);
+}
+.peca.transformy:hover{
+    transform: translatey(-8px);
+    border-top: 2px dashed rgb(199, 199, 233);
+}
+.peca.rotatex:hover{
+    transform: rotateX(0deg);
+}
+
+.peca.rotatey:hover{
+    transform: rotatey(0deg);
+}
+
+
+.peca.rotatez:hover{
+    transform: rotatez(0deg);
+}
+
+@keyframes drive-and-rotate {
+    0% {
+        transform: translateX(0) rotateY(0deg);
+    }
+    25% {
+        transform: translateX(300px) rotateY(90deg);
+    }
+    50% {
+        transform: translateX(600px) rotateY(180deg);
+    }
+    75% {
+        transform: translateX(900px) rotateY(270deg);
+    }
+    100% {
+        transform: translateX(1200px) rotateY(360deg);
+    }
+}
